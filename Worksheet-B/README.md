@@ -1,5 +1,4 @@
-View raw
-
+Print
 Fallout 4 mini game procedure
 	Create multiple arrays of 4 letter words 
 	"Array" = Array selected at random from multiple arrays           
