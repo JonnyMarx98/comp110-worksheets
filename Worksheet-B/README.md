@@ -1,17 +1,17 @@
-Print
+
 Fallout 4 mini game procedure
 	Create multiple arrays of 4 letter words 
 	"Array" = Array selected at random from multiple arrays           
-	"SecretWord" = Word selected at random from "Array"		  
+	"SecretWord" = Word selected at random from "Array" 
 	"AttemptsRemaining" = 4
 	"Likness" = 0
 
 	Print 'Welcome to ROBCO Industries (TM) Termlink'
 	Print 'Password Required'
 
-	WHILE "Likeness" < 4 and "AttemptsRemaing" > 0 DO	    	      # Ends loop when player guesses correctly, or after four incorrect guesses
-		"Likeness" = 0						                                  # Resets the likness back to 0 after an incorrect guess
-		Print 'Attempts Remaining: "AttemptsRemaining" '            # Displays 'Attempts Remaining: x' where x is No. of attempts remaining
+	WHILE "Likeness" < 4 and "AttemptsRemaing" > 0 DO	    	 # Ends loop when player guesses correctly, or after four incorrect guesses
+		"Likeness" = 0						 # Resets the likness back to 0 after an incorrect guess
+		Print 'Attempts Remaining: "AttemptsRemaining" '         # Displays 'Attempts Remaining: x' where x is No. of attempts remaining
 		Print "Array"
 		"WordGuessed" = The word the player enters
 		If first letter of "WordGuessed" is the same as first letter of "SecretWord" Do
