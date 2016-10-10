@@ -32,3 +32,4 @@ Fallout 4 mini game procedure
 	Else Print "You failed, Nice Try"
 END
 	
+![alt tag](https://raw.githubusercontent.com/JonnyMarx98/comp110-worksheets/master/Worksheet-B/flowchart%20fallout%204.PNG)
