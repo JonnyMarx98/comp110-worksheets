@@ -10,7 +10,7 @@ Fallout 4 mini game procedure
 	Print 'Password Required'
 
 	WHILE "Likeness" < 4 and "AttemptsRemaing" > 0 DO	    	 # Ends loop when player guesses correctly, or after four incorrect guesses
-		"Likeness" = 0						 # Resets the likness back to 0 after an incorrect guess
+		"Likeness" = 0						               # Resets the likness back to 0 after an incorrect guess
 		Print 'Attempts Remaining: "AttemptsRemaining" '         # Displays 'Attempts Remaining: x' where x is No. of attempts remaining
 		Print "Array"
 		"WordGuessed" = The word the player enters
