@@ -1,3 +1,4 @@
+View raw
 
 Fallout 4 mini game procedure
 	Create multiple arrays of 4 letter words 
