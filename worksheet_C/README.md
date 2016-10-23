@@ -12,7 +12,7 @@ F) O(N Log N) [1]
 
 G) O(N^2 Log N) The time complexity of the sort function is O(N Log N) and the time complexity of the for loop is O(N), so multiplying these together you get O(N^2 Log N) 
 
-H) As n increases n^2 log n will eventually grow larger than n^2 so for larger values the first algorithm, with time complexity O(N^2) will run faster.  
+H) As n increases n^2 log n will eventually grow larger than n^2 so for larger values the first algorithm, with time complexity O(N^2),  will run faster.  
 
 I) Because it will be faster for short lists.
 
