@@ -4,7 +4,7 @@ B)  Because there are is a for loop within a for loop (a nested loop). This mean
 
 C) It is still correct because every value of j is still checked with every value of I.  
 
-D) The algorithm will run twice as fast because it will not check the same list index's twice like the original algorithm would. For example  in the original algorithm, if I = 5 and j = 4 it would check if list[5] = list[4] which is the same as if I = 4 and j= 5.  
+D) The algorithm will run twice as fast because it will not check the same list indexes twice like the original algorithm would. For example  in the original algorithm, if I = 5 and j = 4 it would check if list[5] = list[4] which is the same as if I = 4 and j= 5.  
 
 E) No its not quadratic because it no longer has to check the through n*n times.  
 
