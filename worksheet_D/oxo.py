@@ -1,7 +1,7 @@
 class OxoBoard:
     def __init__(self):
         """ The initialiser. Initialise any fields you need here. """
-        raise NotImplementedError("TODO: implement __init__")
+        Boardgrid = [[0,0,0],[0,0,0],[0,0,0]]
 
     def get_square(self, x, y):
         """ Return 0, 1 or 2 depending on the contents of the specified square. """
