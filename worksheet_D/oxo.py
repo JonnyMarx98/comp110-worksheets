@@ -1,15 +1,14 @@
 class OxoBoard:
     def __init__(self):
-        """ The initialiser. Initialise any fields you need here. """
-        self.boardgrid = [[0,0,0],[0,0,0],[0,0,0]]
+        # Initialises the board array
+        self.boardgrid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
     def get_square(self, x, y):
-        """ Return 0, 1 or 2 depending on the contents of the specified square. """
+        # Returns the contents of the specified square
         return self.boardgrid[x][y]
 
     def set_square(self, x, y, mark):
-        """ If the specified square is currently empty (0), fill it with mark and return True.
-            If the square is not empty, leave it as-is and return False. """
+        # Fills empty squares with mark and returns True, if square is not empty returns False
         if self.boardgrid[x][y] == 0:
             self.boardgrid[x][y] = mark
             return True
@@ -17,9 +16,6 @@ class OxoBoard:
             return False
 
     def is_board_full(self):
-        """ If there are still empty squares on the board, return False.
-            If there are no empty squares, return True. """
-
         # Checks every square to see if it is empty and returns True if none of them are empty.
         for x in xrange(3):
             for y in xrange(3):
@@ -28,8 +24,7 @@ class OxoBoard:
         return True
 
     def get_winner(self):
-        """ If a player has three in a row, return 1 or 2 depending on which player.
-            Otherwise, return 0. """
+        # Checks if 3 squares in a row, column or diagonal are the same but not empty and returns the value in those squares (1 or 2).
         for i in xrange(3):
             # Horizontal win
             if self.boardgrid[0][i] == self.boardgrid[1][i] == self.boardgrid[2][i]:
