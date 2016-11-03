@@ -1,26 +1,52 @@
 class OxoBoard:
     def __init__(self):
         """ The initialiser. Initialise any fields you need here. """
-        Boardgrid = [[0,0,0],[0,0,0],[0,0,0]]
+        self.boardgrid = [[0,0,0],[0,0,0],[0,0,0]]
 
     def get_square(self, x, y):
         """ Return 0, 1 or 2 depending on the contents of the specified square. """
-        raise NotImplementedError("TODO: implement get_square")
+        return self.boardgrid[x][y]
 
     def set_square(self, x, y, mark):
         """ If the specified square is currently empty (0), fill it with mark and return True.
             If the square is not empty, leave it as-is and return False. """
-        raise NotImplementedError("TODO: implement set_square")
+        if self.boardgrid[x][y] == 0:
+            self.boardgrid[x][y] = mark
+            return True
+        else:
+            return False
 
     def is_board_full(self):
         """ If there are still empty squares on the board, return False.
             If there are no empty squares, return True. """
-        raise NotImplementedError("TODO: implement is_board_full")
+
+        # Checks every square to see if it is empty and returns True if none of them are empty.
+        for x in xrange(3):
+            for y in xrange(3):
+                if self.boardgrid[x][y] == 0:
+                    return False
+        return True
 
     def get_winner(self):
         """ If a player has three in a row, return 1 or 2 depending on which player.
             Otherwise, return 0. """
-        raise NotImplementedError("TODO: implement get_winner")
+        for i in xrange(3):
+            # Horizontal win
+            if self.boardgrid[0][i] == self.boardgrid[1][i] == self.boardgrid[2][i]:
+                if self.boardgrid[2][i] != 0:       # Checks if squares aren't empty
+                    return self.boardgrid[2][i]
+            # Vertical win
+            elif self.boardgrid[i][0] == self.boardgrid[i][1] == self.boardgrid ==[i][2]:
+                if self.boardgrid[i][2] != 0:
+                    return self.boardgrid[i][2]
+            #Diagonal win
+            elif self.boardgrid[0][0] == self.boardgrid[1][1] == self.boardgrid[2][2]:
+                if self.boardgrid[2][2] != 0:
+                    return self.boardgrid[2][2]
+            elif self.boardgrid[0][2] == self.boardgrid[1][1] == self.boardgrid[2][0]:
+                if self.boardgrid[2][0] != 0:
+                    return self.boardgrid[2][0]
+        return 0
 
     def show(self):
         """ Display the current board state in the terminal. You should not need to edit this. """
