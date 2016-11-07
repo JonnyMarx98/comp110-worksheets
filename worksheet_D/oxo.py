@@ -31,7 +31,7 @@ class OxoBoard:
                 if self.boardgrid[2][i] != 0:       # Checks if squares aren't empty
                     return self.boardgrid[2][i]
             # Vertical win
-            elif self.boardgrid[i][0] == self.boardgrid[i][1] == self.boardgrid ==[i][2]:
+            elif self.boardgrid[i][0] == self.boardgrid[i][1] == self.boardgrid[i][2]:
                 if self.boardgrid[i][2] != 0:
                     return self.boardgrid[i][2]
             #Diagonal win
