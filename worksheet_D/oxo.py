@@ -1,7 +1,7 @@
 class OxoBoard:
     def __init__(self):
         # Initialises the board array
-        self.boardgrid = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+        self.boardgrid = [[0] * 3 for i in xrange(3)]
 
     def get_square(self, x, y):
         # Returns the contents of the specified square
@@ -27,20 +27,16 @@ class OxoBoard:
         # Checks if 3 squares in a row, column or diagonal are the same but not empty and returns the value in those squares (1 or 2).
         for i in xrange(3):
             # Horizontal win
-            if self.boardgrid[0][i] == self.boardgrid[1][i] == self.boardgrid[2][i]:
-                if self.boardgrid[2][i] != 0:       # Checks if squares aren't empty
-                    return self.boardgrid[2][i]
+            if self.boardgrid[0][i] == self.boardgrid[1][i] == self.boardgrid[2][i] != 0: # Checks if squares aren't empty
+                return self.boardgrid[2][i]
             # Vertical win
-            elif self.boardgrid[i][0] == self.boardgrid[i][1] == self.boardgrid[i][2]:
-                if self.boardgrid[i][2] != 0:
-                    return self.boardgrid[i][2]
+            elif self.boardgrid[i][0] == self.boardgrid[i][1] == self.boardgrid[i][2] != 0:
+                return self.boardgrid[i][2]
             #Diagonal win
-            elif self.boardgrid[0][0] == self.boardgrid[1][1] == self.boardgrid[2][2]:
-                if self.boardgrid[2][2] != 0:
-                    return self.boardgrid[2][2]
-            elif self.boardgrid[0][2] == self.boardgrid[1][1] == self.boardgrid[2][0]:
-                if self.boardgrid[2][0] != 0:
-                    return self.boardgrid[2][0]
+        if self.boardgrid[0][0] == self.boardgrid[1][1] == self.boardgrid[2][2] != 0:
+            return self.boardgrid[2][2]
+        elif self.boardgrid[0][2] == self.boardgrid[1][1] == self.boardgrid[2][0] != 0:
+            return self.boardgrid[2][0]
         return 0
 
     def show(self):
